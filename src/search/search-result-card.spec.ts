@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { MaterialModule } from '@angular2-material/card/card';
+import { MaterialModule } from '@angular/material';
 
 import { AnalyticsTrackerService } from '../services/analytics-tracker.service';
 import { TogglePanelComponent } from '../toggle/toggle-panel.component';

@@ -7,10 +7,9 @@ import { MaterialModule } from '@angular/material';
 import { YoutubeAppComponent } from './app.component';
 import { SearchModule } from '../search/search.module';
 import { AppRoutesModule } from '../routes.module';
-import { StuffComponent } from './stuff/stuff.component';
 
 @NgModule({
-  declarations: [  StuffComponent],  // TODO(M1): Add the root component here.
+  declarations: [ ],  // TODO(M1): Add the root component here.
   imports: [
     BrowserModule,
     HttpModule,
