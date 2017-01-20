@@ -1,0 +1,46 @@
+<md-card>
+  <div class="center">
+    <img class="thumbnail" *ngIf="!isPlaying"
+        alt="Video thumbnail"
+        src="{{video.thumbnailUrl}}"
+        (click)="play()">
+
+    <div *ngIf="isPlaying">
+      <iframe [src]="safeVideoUrl"></iframe>
+    </div>
+  </div>
+  <div>  <!-- TODO(M8): Replace with toggle panel component. -->
+    <md-card-content demo-toggle-panel-left>
+      <h4> Stats </h4>
+      <div class="stats-panel">
+        <div>
+          <p>
+            <span class="card-label">Views:</span>
+            <!-- TODO(M4): Add video view count. -->
+          </p>
+          <p>
+            <span class="card-label">Likes:</span>
+            <!-- TODO(M4): Add video like count. -->
+          </p>
+          <p>
+            <span class="card-label">Dislikes:</span>
+            <!-- TODO(M4): Add video dislike count. -->
+          </p>
+        </div>
+
+        <!-- TODO(M5): Add thumbs component and use event binding to handle the
+                       thumbs change event. -->
+      </div>
+    </md-card-content>
+    <md-card-content demo-toggle-panel-right>
+      <h4>Description</h4>
+      <!-- TODO(M7): Use the fuzzy time pipe below on video.publishedAt. -->
+      <!-- TODO(M4): Uncomment the following two lines. -->
+      <!-- <p>Uploaded {{video.publishedAt }}</p> -->
+      <!-- <p>{{video.description}}</p> -->
+    </md-card-content>
+  </div>  <!-- TODO(M8): Replace with toggle panel component. -->
+  <!-- TODO(M9): Add the demo-annotation tag. -->
+  <!-- TODO(M10): Add the analytics-monitor tag. -->
+</md-card>
+<br>

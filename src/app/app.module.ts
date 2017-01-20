@@ -1,20 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { MaterialModule } from '@angular/material';
 
-import { AppComponent } from './app.component';
+import { YoutubeAppComponent } from './app.component';
+import { SearchModule } from '../search/search.module';
+import { AppRoutesModule } from '../routes.module';
+import { StuffComponent } from './stuff/stuff.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [  StuffComponent],  // TODO(M1): Add the root component here.
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule,
+    // SearchModule  // TODO(M1): Uncomment to import the search module here.
+    // TODO(M11): Import the routes module.
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [  ],  // TODO(M1): Add the root component here.
 })
-export class AppModule { }
+export class AppModule {}

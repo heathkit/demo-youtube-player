@@ -1,0 +1,22 @@
+<form #upload="ngForm" 
+      (submit)="submit()">
+  <h1>Upload a video</h1>
+
+  <!-- TODO(M12): Add the title and description fields.
+  
+       HINT: You can use the new md-input component...
+       
+       <md-input placeholder="Descriptor of field"
+                 class="md-input"
+                 name="fieldTitle"
+                 aria-label="Accessibility label">
+  -->
+  
+  <p>
+    <button md-raised-button type="submit" color="primary">
+      UPLOAD
+    </button>
+  </p>
+</form>
+
+<div *ngIf="upload.submitted">Your data has been successfully submitted...</div>

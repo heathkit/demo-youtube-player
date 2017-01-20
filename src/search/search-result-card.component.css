@@ -1,0 +1,55 @@
+* {
+  font-family: RobotoDraft, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+  height: 220px;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.highlight {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+
+.fixed {
+  height: 125px;
+}
+
+.video-stats-panel {
+  display: flex;
+  flex-direction: row;
+}
+
+.video-stats-panel > div:first-child {
+  flex-basis: 80%;
+}
+
+.video-card-label {
+  display: inline-block;
+  min-width: 75px;
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 1px 20px #c2185b;
+}

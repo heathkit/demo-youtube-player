@@ -1,4 +1,6 @@
-# Hackday
+# Demo Youtube Viewer
+
+This is a demo project for the 2017 Seattle Angular Hackday.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
 

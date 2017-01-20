@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
+import { AnalyticsTrackerService } from '../services/analytics-tracker.service';
+
+/**
+ * Root component for the entire Angular 2 YouTube app.
+ */
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'demo-youtube-player',
+  template: '',  // TODO(M1): Use app.component.html instead.
+  styleUrls: ['app.component.css'],
+  viewProviders: [ AnalyticsTrackerService ]
 })
-export class AppComponent {
-  title = 'app works!';
-}
+export class YoutubeAppComponent {}

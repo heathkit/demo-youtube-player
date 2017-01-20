@@ -1,0 +1,70 @@
+youtube-app {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 1px 20px rgba(0,0,0,0.3);
+  background: #757575;
+  color: #fff;
+}
+
+* {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #bdbdbd;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+textarea {
+  background: #424242;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.md-input-placeholder {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.md-input-placeholder.md-focused {
+  color: #c2185b;
+}
+
+.md-input-placeholder.md-focused.md-accent {
+  color: #b0bec5;
+}
+
+.md-input-placeholder.md-focused.md-warn {
+  color: #f44336;
+}
+      
+.md-input-underline {
+  border-color: #efefef;
+}
+
+.md-input-underline .md-input-ripple {
+  background-color: #c2185b;
+}
+
+.md-input-underline .md-input-ripple.md-accent {
+  background-color: #b0bec5;
+}
+
+.md-input-underline .md-input-ripple.md-warn {
+  background-color: #f44336;
+}
