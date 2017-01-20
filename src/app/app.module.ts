@@ -9,14 +9,14 @@ import { SearchModule } from '../search/search.module';
 import { AppRoutesModule } from '../routes.module';
 
 @NgModule({
-  declarations: [ ],  // TODO(M1): Add the root component here.
+  declarations: [YoutubeAppComponent],
   imports: [
     BrowserModule,
     HttpModule,
     MaterialModule,
-    // SearchModule  // TODO(M1): Uncomment to import the search module here.
+    SearchModule
     // TODO(M11): Import the routes module.
   ],
-  bootstrap: [  ],  // TODO(M1): Add the root component here.
+  bootstrap: [ AppModule ],
 })
 export class AppModule {}

@@ -12,20 +12,22 @@ import { Video } from '../video';
  */
 @Injectable()
 export class YoutubeService {
-  
+
   /** The "API" resource URL. */
   videosUrl = 'services/search-results.json';
-  
+
   constructor(private http: Http) {}
-  
+
   /**
    * Get the list of videos from our "API".
    * @returns A promise that resolve to a list of Videos.
    */
+  // TODO(M???)
+  /*
   getVideos(): Promise<Video[]> {
     return this.http.get(this.videosUrl)
                     .toPromise()
                     .then(response => JSON.parse(response._body) as Video[]);
   }
-  
+  */
 }

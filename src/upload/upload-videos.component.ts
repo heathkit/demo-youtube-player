@@ -7,8 +7,8 @@ import { NgForm } from '@angular/forms';
  */
 @Component({
   selector: 'demo-upload-videos',
-  templateUrl: 'upload/upload-videos.component.html',
-  styleUrls: ['upload/upload-videos.component.css'],
+  templateUrl: 'upload-videos.component.html',
+  styleUrls: ['upload-videos.component.css'],
 })
 export class UploadVideosComponent {
 

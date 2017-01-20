@@ -17,7 +17,7 @@ const FAKE_RESULTS = [
  */
 @Component({
   selector: 'demo-search-videos',
-  templateUrl: 'search/search-videos.component.html',
+  templateUrl: 'search-videos.component.html',
 })
 export class SearchVideosComponent {
   /* Container to hold the list of video results. */
