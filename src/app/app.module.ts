@@ -17,6 +17,6 @@ import { AppRoutesModule } from '../routes.module';
     SearchModule
     // TODO(M11): Import the routes module.
   ],
-  bootstrap: [ AppModule ],
+  bootstrap: [YoutubeAppComponent],
 })
 export class AppModule {}

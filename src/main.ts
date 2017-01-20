@@ -1,9 +1,12 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import './polyfills.ts';
 
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
+import { environment } from './environments/environment';
 import { AppModule } from './app/app.module';
 
-/**
- * The "main" for the Angular 2 app. This tells Angular to start doing stuff,
- * i.e. bootstrap the app.
- */
+if (environment.production) {
+  enableProdMode();
+}
+
 platformBrowserDynamic().bootstrapModule(AppModule);
