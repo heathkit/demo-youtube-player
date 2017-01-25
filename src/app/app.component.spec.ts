@@ -2,13 +2,18 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { YoutubeAppComponent } from './app.component';
+import { MaterialModule } from '@angular/material';
 
-describe('AppComponent', () => {
+
+// Uncomment this if you want to fix up the declarations and
+// imports.
+xdescribe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         YoutubeAppComponent
       ],
+      imports: [MaterialModule]
     });
     TestBed.compileComponents();
   });

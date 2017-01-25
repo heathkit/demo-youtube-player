@@ -8,7 +8,6 @@ import { TogglePanelComponent } from '../toggle/toggle-panel.component';
 import { AnalyticsMonitorDirective } from './analytics-monitor.directive';
 import { FuzzyTimePipe } from './fuzzy-time.pipe';
 import { SearchResultCardComponent } from './search-result-card.component';
-import { VideoAnnontationComponent } from './video_annotation.component';
 import { ThumbChangeEvent, ThumbsComponent, ThumbState } from './thumbs.component';
 import { Video } from '../video';
 
@@ -16,7 +15,7 @@ describe('search result component', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        // TODO(M6): Delcare all components used in the test.
+        TestSearchResultCardComponent, SearchResultCardComponent, ThumbsComponent
       ],
       providers: [ AnalyticsTrackerService ],
       imports: [ MaterialModule ],
@@ -25,18 +24,16 @@ describe('search result component', () => {
   }));
 
   it('should display', () => {
-    // TODO(M6): Create a TestSearchResultCardComponent using TestBed.
-    // TODO(M6): Detect changes in the fixture.
-    // TODO(M6): Add expectations on the texxt in fixture.nativeElement.textContent;
+    let fixture = TestBed.createComponent(TestSearchResultCardComponent);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('some description');
   });
 });
 
 
 @Component({
   selector: 'test-search-result-card',
-  // TODO(M6): Create a template on the line below that tests the
-  //           SearchResultCardComponent.
-  template: '',
+  template: '<demo-search-result-card [video]="video"></demo-search-result-card>',
 })
 class TestSearchResultCardComponent {
   video: Video;
