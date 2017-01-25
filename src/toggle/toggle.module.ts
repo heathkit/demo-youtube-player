@@ -5,11 +5,16 @@ import { MaterialModule } from '@angular/material';
 import { TogglePanelComponent } from './toggle-panel.component';
 
 @NgModule({
-  declarations: [  ],  // TODO(M8): Declare the toggle panel component.
+  declarations: [
+    TogglePanelComponent
+  ],
   imports: [
     CommonModule,
-    MaterialModule
+    // Need .forRoot when using material in a submodule.
+    MaterialModule.forRoot()
   ],
-  exports: [  ],  // TODO(M8): Export the toggle panel component.
+  exports: [
+    TogglePanelComponent
+  ],
 })
 export class ToggleModule {}

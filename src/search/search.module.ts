@@ -31,11 +31,11 @@ import { VideoAnnotationComponent } from './video-annotation.component';
     YoutubeService
   ],
   imports: [
-    // TODO(M8): Import the toggle module.
-    UploadModule,
     CommonModule,
     FormsModule,
     MaterialModule,
+    ToggleModule,
+    UploadModule,
   ],
   exports: [ SearchVideosComponent ]
 })

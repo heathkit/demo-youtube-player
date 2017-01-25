@@ -9,7 +9,7 @@
       <iframe [src]="safeVideoUrl"></iframe>
     </div>
   </div>
-  <div>  <!-- TODO(M8): Replace with toggle panel component. -->
+  <demo-toggle-panel>
     <md-card-content demo-toggle-panel-left>
       <h4> Stats </h4>
       <div class="stats-panel">
@@ -37,7 +37,7 @@
        <p>Uploaded {{video.publishedAt | fuzzyTime }}</p>
        <p>{{video.description}}</p>
     </md-card-content>
-  </div>  <!-- TODO(M8): Replace with toggle panel component. -->
+  </demo-toggle-panel>
   <!-- TODO(M9): Add the demo-annotation tag. -->
   <!-- TODO(M10): Add the analytics-monitor tag. -->
 </md-card>

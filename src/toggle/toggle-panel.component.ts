@@ -5,12 +5,18 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'demo-toggle-panel',
-  templateUrl: 'toggle/toggle-panel.component.html'
+  templateUrl: './toggle-panel.component.html'
 })
 export class TogglePanelComponent {
+  // Here's an example of using string-literal type unions in TS, to
+  // have type-safe string constants.
+  displayed: 'left' | 'right' = 'left';
 
-  // TODO(M8): Maintain state for which content is showing.
-
-  // TODO(M8): Toggle between the different panels.
-
+  toggle() {
+    if (this.displayed === 'left') {
+      this.displayed = 'right';
+    } else {
+      this.displayed = 'left';
+    }
+  }
 }
