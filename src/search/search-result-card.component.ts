@@ -20,10 +20,8 @@ export class SearchResultCardComponent {
   state: SearchResultState = SearchResultState.THUMBNAIL;
 
   /* The video instance to take in. */
-  @Input() video: Video;
 
-  /* The CardPlayEvent to emit. */
-  // TODO(M5): Add a bindable output property for the card play event.
+  @Input() video: Video;
 
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -59,7 +57,8 @@ export class SearchResultCardComponent {
    * @param event The event that captures the thumb click.
    */
   onThumbsChange(event: ThumbChangeEvent) : void {
-    // TODO(M5): Handle events to vote on the video.
+    this.video.likeCount += event.upDiff;
+    this.video.dislikeCount += event.downDiff;
   }
 }
 

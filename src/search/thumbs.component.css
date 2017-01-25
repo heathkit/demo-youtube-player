@@ -28,17 +28,17 @@ img {
 }
 
 .up {
-  background-image: url('images/thumbs_up_black.svg');
+  background-image: url('../assets/images/thumbs_up_black.svg');
 }
 
 .down {
-  background-image: url('images/thumbs_down_black.svg');
+  background-image: url('../assets/images/thumbs_down_black.svg');
 }
 
 .up.selected {
-  background-image: url('images/thumbs_up_selected.svg');
+  background-image: url('../assets/images/thumbs_up_selected.svg');
 }
 
 .down.selected {
-  background-image: url('images/thumbs_down_selected.svg');
+  background-image: url('../assets/images/thumbs_down_selected.svg');
 }

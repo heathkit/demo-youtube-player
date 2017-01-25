@@ -12,19 +12,29 @@ export enum ThumbState {
  */
 @Component({
   selector: 'demo-vote-thumbs',
-  templateUrl: 'search/thumbs.component.html',
-  styleUrls: ['search/thumbs.component.css']
+  templateUrl: './thumbs.component.html',
+  styleUrls: ['./thumbs.component.css']
 })
 export class ThumbsComponent {
 
   state: ThumbState = ThumbState.NONE;
 
-  // TODO(M5): Add an output change event emitter.
+  @Output() change = new EventEmitter<ThumbChangeEvent>();
 
   // Templates can't access static value, so we redirect as follows.
   get UP_T() { return ThumbState.UP; }
   get DOWN_T() { return ThumbState.DOWN; }
   get NONE_T() { return ThumbState.NONE; }
+
+  onClick(stateClicked: ThumbState) {
+    let oldState = this.state;
+    if (oldState == stateClicked) {
+      this.state = ThumbState.NONE;
+    } else {
+      this.state = stateClicked;
+    }
+    this.change.emit(new ThumbChangeEvent(oldState, this.state));
+  }
 
   // TODO(M5): Add an onClick() handler for the thumbs up / down buttons.
 
