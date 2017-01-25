@@ -7,7 +7,7 @@ import { AnalyticsTrackerService } from '../services/analytics-tracker.service';
  */
 @Component({
   selector: 'demo-youtube-player',
-  template: '',  // TODO(M1): Use app.component.html instead.
+  templateUrl: './app.component.html',
   styleUrls: ['app.component.css'],
   viewProviders: [ AnalyticsTrackerService ]
 })
