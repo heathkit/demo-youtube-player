@@ -16,15 +16,15 @@
         <div>
           <p>
             <span class="card-label">Views:</span>
-            <!-- TODO(M4): Add video view count. -->
+            {{video.viewCount}}
           </p>
           <p>
             <span class="card-label">Likes:</span>
-            <!-- TODO(M4): Add video like count. -->
+            {{video.likeCount}}
           </p>
           <p>
             <span class="card-label">Dislikes:</span>
-            <!-- TODO(M4): Add video dislike count. -->
+            {{video.dislikeCount}}
           </p>
         </div>
 
@@ -35,9 +35,8 @@
     <md-card-content demo-toggle-panel-right>
       <h4>Description</h4>
       <!-- TODO(M7): Use the fuzzy time pipe below on video.publishedAt. -->
-      <!-- TODO(M4): Uncomment the following two lines. -->
-      <!-- <p>Uploaded {{video.publishedAt }}</p> -->
-      <!-- <p>{{video.description}}</p> -->
+       <p>Uploaded {{video.publishedAt }}</p>
+       <p>{{video.description}}</p> 
     </md-card-content>
   </div>  <!-- TODO(M8): Replace with toggle panel component. -->
   <!-- TODO(M9): Add the demo-annotation tag. -->

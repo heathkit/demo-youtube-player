@@ -8,11 +8,6 @@
 <!-- Search results -->
 <div *ngIf="videoList">
   Total Results: {{videoList.length}}
-  <li *ngFor="let video of videoList">
-    Description: {{video.description}}
-  </li>
-
-  <!-- TODO(M4): Render a search-result-card for each video. Use ng-repeat and
-                 property binding. Use this instead of rendering the description
-                 for each search result from Milestone 2. -->
+  <demo-search-result-card *ngFor="let video of videoList" [video]="video">
+  </demo-search-result-card>
 </div>

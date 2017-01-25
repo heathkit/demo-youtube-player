@@ -19,7 +19,7 @@ import { VideoAnnotationComponent } from './video-annotation.component';
 
 @NgModule({
   declarations: [
-    // TODO(M4): Declare the search result card component.
+    SearchResultCardComponent,
     // TODO(M5): Declare the thumbs component.
     // TODO(M7): Declare the fuzzy time pipe.
     // TODO(M9): Declare the video annotation component.

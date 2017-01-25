@@ -13,14 +13,13 @@ export enum SearchResultState {
 
 @Component({
   selector: 'demo-search-result-card',
-  templateUrl: 'search/search-result-card.component.html',
-  styleUrls: [ 'search/search-result-card.component.css' ],
+  templateUrl: './search-result-card.component.html',
+  styleUrls: [ './search-result-card.component.css' ],
 })
 export class SearchResultCardComponent {
   state: SearchResultState = SearchResultState.THUMBNAIL;
 
   /* The video instance to take in. */
-  // TODO(?????): Add a bindable input property for the video.
   @Input() video: Video;
 
   /* The CardPlayEvent to emit. */
