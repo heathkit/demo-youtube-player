@@ -23,11 +23,11 @@ export class YoutubeService {
    * @returns A promise that resolve to a list of Videos.
    */
   // TODO(M???)
-  /*
+  
   getVideos(): Promise<Video[]> {
     return this.http.get(this.videosUrl)
                     .toPromise()
-                    .then(response => JSON.parse(response._body) as Video[]);
+                    .then(response => JSON.parse(response.text()) as Video[]);
   }
-  */
+  
 }

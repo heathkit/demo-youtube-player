@@ -29,8 +29,7 @@ export class SearchVideosComponent {
   /* A query list containing all result cards. */
   // TODO(M9): Get ahold of all search result card components.
 
-  // TODO(M3): Inject the YoutubeService in the constructor.
-  constructor() {}
+  constructor(private ytService: YoutubeService) {}
 
   /**
    * Enforce that only one video is playing at a time.
@@ -47,8 +46,8 @@ export class SearchVideosComponent {
   }
 
   fetch() {
-    this.videoList = FAKE_RESULTS;
+    this.ytService.getVideos().then((videos) => {
+      this.videoList = videos;
+    });
   }
-  // TODO(M3): Update the fetch() method to use the results form YoutubeService.
-  //           You should also change the type declaration.
 }
