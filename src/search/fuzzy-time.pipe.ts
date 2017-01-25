@@ -4,9 +4,8 @@ import { Pipe, PipeTransform } from '@angular/core';
  * Pipe to get a fuzzy value for how long ago a date occured, e.g., "7 days ago"
  * or "3 years ago".
  */
-// TODO(M7): Turn this class into an Angular pipe using @Pipe and implementing
-//           the PipeTransform interface.
-export class FuzzyTimePipe {
+@Pipe({name: 'fuzzyTime'})
+export class FuzzyTimePipe implements PipeTransform {
 
   /**
    * Transform an input ISO 8601 date into a fuzzy value. This is a very naive
@@ -15,8 +14,27 @@ export class FuzzyTimePipe {
    * @param {args} TypeScript rest parameters (ignored).
    * @return The fuzzy time representation of the date.
    */
-  transform() {  // TODO(M7): Implement correctly.
-    // TODO(M7): Write the logic for the fuzzy time pipe. Don't worry about
-    //           having "perfect" logic.
+  transform(value: string) {
+    const uploaded: Date = new Date(value);
+    const today: Date = new Date();
+
+    if (uploaded.getFullYear() < today.getFullYear()) {
+      const diff = today.getFullYear() - uploaded.getFullYear();
+      return `${diff} years ago`;
+    } else if (uploaded.getMonth() < today.getMonth()) {
+      const diff = today.getMonth() - uploaded.getMonth();
+      return `${diff} months ago`;
+    } else if (uploaded.getDate() < today.getDate()) {
+      const diff = today.getDate() - uploaded.getDate();
+      return `${diff} days ago`;
+    } else if (uploaded.getHours() < today.getHours()) {
+      const diff = today.getHours() - uploaded.getHours();
+      return `${diff} hours ago`;
+    } else if (uploaded.getMinutes() < today.getMinutes()) {
+      const diff = today.getMinutes() - uploaded.getMinutes();
+      return `${diff} minutes ago`;
+    }
+
+    return value;
   }
 }

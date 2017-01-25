@@ -21,7 +21,7 @@ import { VideoAnnotationComponent } from './video-annotation.component';
   declarations: [
     SearchResultCardComponent,
     ThumbsComponent,
-    // TODO(M7): Declare the fuzzy time pipe.
+    FuzzyTimePipe,
     // TODO(M9): Declare the video annotation component.
     // TODO(M10): Delcare the analytics monitor directive.
     SearchVideosComponent,
