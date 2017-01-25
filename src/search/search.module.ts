@@ -22,7 +22,7 @@ import { VideoAnnotationComponent } from './video-annotation.component';
     SearchResultCardComponent,
     ThumbsComponent,
     FuzzyTimePipe,
-    // TODO(M9): Declare the video annotation component.
+    VideoAnnotationComponent,
     // TODO(M10): Delcare the analytics monitor directive.
     SearchVideosComponent,
   ],

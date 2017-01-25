@@ -8,6 +8,8 @@
 <!-- Search results -->
 <div *ngIf="videoList">
   Total Results: {{videoList.length}}
-  <demo-search-result-card *ngFor="let video of videoList" [video]="video">
+  <demo-search-result-card *ngFor="let video of videoList"
+                           [video]="video"
+                           (playVideo)="playOneCard($event)">
   </demo-search-result-card>
 </div>

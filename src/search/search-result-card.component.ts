@@ -20,8 +20,9 @@ export class SearchResultCardComponent {
   state: SearchResultState = SearchResultState.THUMBNAIL;
 
   /* The video instance to take in. */
-
   @Input() video: Video;
+
+  @Output() playVideo = new EventEmitter<CardPlayEvent>();
 
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -40,16 +41,14 @@ export class SearchResultCardComponent {
    * @returns A boolean indicating if the video is playing.
    */
   get isPlaying(): boolean {
-    return this.state == SearchResultState.PLAYER;
+    return this.state === SearchResultState.PLAYER;
   }
 
   /**
    * Instruction to play the video on this search result.
    */
   play(): void {
-    this.video.viewCount++;
-    // TODO(M9): Emit a play event instead of setting the state.
-    this.state = SearchResultState.PLAYER;  // TODO(M9): Remove this.
+    this.playVideo.emit(new CardPlayEvent(this));
   }
 
   /**
@@ -62,9 +61,6 @@ export class SearchResultCardComponent {
   }
 }
 
-
 export class CardPlayEvent {
-
   constructor(public target: SearchResultCardComponent) {}
-
 }

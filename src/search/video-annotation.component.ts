@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { SearchResultCardComponent } from './search-result-card.component';
+import {SearchVideosComponent} from './search-videos.component';
 
 export enum SearchResultState {
   THUMBNAIL,
@@ -13,20 +14,28 @@ export enum SearchResultState {
  */
 @Component({
   selector: 'demo-video-annotation',
-  templateUrl: 'search/video-annotation.component.html',
-  styleUrls: ['search/video-annotation.component.css']
+  template: '<div class="annotation">{{excitingAnnotation}}</div>',
+  styles: [`
+    .annotation {
+      margin: 18px 0 0 0;
+      padding: 8px;
+      background: #151515;
+      background: rgba(0,0,0,0.3);
+    }`]
 })
 export class VideoAnnotationComponent {
-
-  // TODO(M9): Use parent injection to get ahold of the video.
+  constructor(private card: SearchResultCardComponent) { }
 
   /**
-   * Getter to retrive the video annotation we want to display using very simple
+   * Getter to retrieve the video annotation we want to display using very simple
    * logic.
    */
   get excitingAnnotation() {
-    // TODO(M9): Add an appropriate annotation based on the video description.
-    return '';
+    if (this.card.video.description!.match(/music/)) {
+      return 'Turn up your speakers!';
+    } else {
+      return 'Learn more about cats on our channel!'
+    }
   }
 
 }

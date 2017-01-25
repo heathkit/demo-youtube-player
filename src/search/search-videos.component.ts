@@ -27,7 +27,7 @@ export class SearchVideosComponent {
   searchTerm: string = 'cats';
 
   /* A query list containing all result cards. */
-  // TODO(M9): Get ahold of all search result card components.
+  @ViewChildren(SearchResultCardComponent) cards: QueryList<SearchResultCardComponent>;
 
   constructor(private ytService: YoutubeService) {}
 
@@ -36,13 +36,10 @@ export class SearchVideosComponent {
    * @param event The event that indicates if a user wants to play a video.
    */
   playOneCard(event: CardPlayEvent): void {
-    /*
-    TODO(M9): Iterate over the result card components.
-    for (let card of this.cards.toArray()) {
-      card.state = event.target == card ? SearchResultState.PLAYER :
-                                          SearchResultState.THUMBNAIL;
+    for (const card of this.cards.toArray()) {
+      card.state = event.target === card ? SearchResultState.PLAYER :
+                                           SearchResultState.THUMBNAIL;
     }
-    */
   }
 
   fetch() {
