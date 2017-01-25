@@ -46,8 +46,9 @@ export class SearchVideosComponent {
     */
   }
 
-  // TODO(M2): Implement a fetch() method that returns the FAKE_RESULTS using
-  //           this.videoList.
+  fetch() {
+    this.videoList = FAKE_RESULTS;
+  }
   // TODO(M3): Update the fetch() method to use the results form YoutubeService.
   //           You should also change the type declaration.
 }
