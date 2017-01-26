@@ -23,7 +23,7 @@ import { VideoAnnotationComponent } from './video-annotation.component';
     ThumbsComponent,
     FuzzyTimePipe,
     VideoAnnotationComponent,
-    // TODO(M10): Delcare the analytics monitor directive.
+    AnalyticsMonitorDirective,
     SearchVideosComponent,
   ],
   providers: [

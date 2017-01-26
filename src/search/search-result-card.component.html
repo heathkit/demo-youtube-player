@@ -39,6 +39,8 @@
     </md-card-content>
   </demo-toggle-panel>
   <demo-video-annotation></demo-video-annotation>
-  <!-- TODO(M10): Add the analytics-monitor tag. -->
+  <demo-analytics-monitor [videoId]="video?.id"
+                          [likeCount]="video.likeCount">
+  </demo-analytics-monitor>
 </md-card>
 <br>
