@@ -2,12 +2,18 @@
   <span>Youtube Demo App</span>
   <span class="fill-space"></span>
   <nav>
-    <!-- TODO(M11): Provide the links to your routes here. -->
+    <a routerLink="/search" md-button color="primary"
+       i18n="Navigation bar element leading to a search page">
+      SEARCH
+    </a>
+    <a routerLink="/upload" md-button color="primary"
+       i18n="Navigation bar element leading to an upload page">
+      UPLOAD
+    </a>
   </nav>
 </md-toolbar>
 
 <div class="app-content">
   Hello, YouTube!!!
-  <!-- TODO(M11): Replace the hard-coded component with the router outlet. -->
-  <demo-search-videos></demo-search-videos>
+  <router-outlet></router-outlet>
 </div>

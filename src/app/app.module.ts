@@ -6,7 +6,15 @@ import { MaterialModule } from '@angular/material';
 
 import { YoutubeAppComponent } from './app.component';
 import { SearchModule } from '../search/search.module';
-import { AppRoutesModule } from '../routes.module';
+import { UploadVideosComponent } from '../upload/upload-videos.component';
+import { SearchVideosComponent } from '../search/search-videos.component';
+import { Routes, RouterModule } from '@angular/router';
+
+export const routes: Routes = [
+  { path: '', component: SearchVideosComponent},
+  { path: 'search', redirectTo: '/'},  // redirect to / from /search.
+  { path: 'upload', component: UploadVideosComponent}
+];
 
 @NgModule({
   declarations: [YoutubeAppComponent],
@@ -14,8 +22,8 @@ import { AppRoutesModule } from '../routes.module';
     BrowserModule,
     HttpModule,
     MaterialModule,
-    SearchModule
-    // TODO(M11): Import the routes module.
+    SearchModule,
+    RouterModule.forRoot(routes),
   ],
   bootstrap: [YoutubeAppComponent],
 })
