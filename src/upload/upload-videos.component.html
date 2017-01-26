@@ -1,22 +1,35 @@
-<form #upload="ngForm" 
+<form #upload="ngForm"
       (submit)="submit()">
   <h1>Upload a video</h1>
-
-  <!-- TODO(M12): Add the title and description fields.
-  
-       HINT: You can use the new md-input component...
-       
-       <md-input placeholder="Descriptor of field"
-                 class="md-input"
-                 name="fieldTitle"
-                 aria-label="Accessibility label">
-  -->
-  
   <p>
-    <button md-raised-button type="submit" color="primary">
+    <label>
+      <md-input-container>
+        <input md-input name="title" class="md-input"
+               placeholder="Video title"
+               i18n-placeholder="Input placeholder text shown before user fills in a form field"
+               aria-label="Video title"
+               i18n-aria-label="Accessiblity label for an input field"
+               ngModel required>
+      </md-input-container>
+    </label>
+  </p>
+  <p>
+    <textarea name="description"
+              placeholder="Video Description"
+              i18n-placeholder="Input placeholder text shown before user fills in a form field"
+              aria-label="Video description"
+              i18n-aria-label="Accessibility label for an input field"
+              ngModel hasCatsRequired></textarea>
+  </p>
+  <p>
+    <button md-raised-button type="submit" color="primary"
+            [disabled]="!upload.valid">
       UPLOAD
     </button>
   </p>
+  <div *ngIf="!upload.valid">
+    You must enter a title and a description with cats in it!
+  </div>
 </form>
 
 <div *ngIf="upload.submitted">Your data has been successfully submitted...</div>

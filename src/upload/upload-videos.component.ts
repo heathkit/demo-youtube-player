@@ -11,10 +11,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['upload-videos.component.css'],
 })
 export class UploadVideosComponent {
-
   /** The upload form from the template. */
-  // TODO(M12): Acess the upload form.
-  uploadForm = { 'value': { 'title': 'FAKE', 'description': 'REPLACE ME!!' } };
+  @ViewChild(NgForm) uploadForm: NgForm;
 
   /**
    * Method to create a string representation of the upload form object.
